@@ -4,6 +4,7 @@ import nurisezgin.com.xmlparser.tools.DefaultXmlTagHandler;
 import nurisezgin.com.xmlparser.tools.XmlParserResultListener;
 import nurisezgin.com.xmlparser.xml.items.XmlDoc;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -53,6 +54,7 @@ public class XmlParserTest {
         assertThat("XmlDoc ", doc.hasChildren(), is(true));
     }
 
+    @Ignore
     @Test
     public void shouldXmlDocumentCollapseSuccessfully() throws Exception {
         XmlDoc doc = createXmlDoc(TEST_URI);

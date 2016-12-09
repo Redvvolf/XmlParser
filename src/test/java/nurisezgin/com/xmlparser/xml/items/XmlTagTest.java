@@ -16,7 +16,7 @@ public class XmlTagTest {
         new XmlTag(null, null);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void shouldMergeOldText() {
         String sampleText = "Sample";
         XmlTag xmlTag = new XmlTag(null, null);
@@ -26,7 +26,7 @@ public class XmlTagTest {
         assertThat("After 2 different text will be ", xmlText, is(equalTo(sampleText)));
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void shouldClearCorrect() throws Exception {
         new XmlTag(null, null).clear();
     }
